@@ -1,0 +1,250 @@
+{
+    "eventId": "2af781de-0a74-467d-a1f3-af286c4d49de",
+    "eventType": "FORM_RESPONSE",
+    "createdAt": "2024-04-09T15:05:53.955Z",
+    "data": {
+      "responseId": "B82A1K",
+      "submissionId": "B82A1K",
+      "respondentId": "VleYAy",
+      "formId": "3y6alx",
+      "formName": "QUIZ",
+      "createdAt": "2024-04-09T15:05:53.000Z",
+      "fields": [
+        {
+          "key": "question_EqbX04",
+          "label": "What is your ideal climate?",
+          "type": "MULTIPLE_CHOICE",
+          "value": [
+            "eb1b5e8f-a687-4bb7-af5c-98bc641aeb61"
+          ],
+          "options": [
+            {
+              "id": "eb1b5e8f-a687-4bb7-af5c-98bc641aeb61",
+              "text": "Tropical"
+            },
+            {
+              "id": "3660114d-49a3-4748-94cb-302ef26c379f",
+              "text": "Temperate"
+            },
+            {
+              "id": "074c5c6f-378f-4c3a-8638-cbc4feca7277",
+              "text": "Cold"
+            },
+            {
+              "id": "5b604798-239a-41c7-a4aa-736f241cbe93",
+              "text": "Mediterranean"
+            },
+            {
+              "id": "9ffba1af-6a89-4679-b487-d164ed6120ad",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "key": "question_rDr6EN",
+          "label": "How much are you comfortable spending monthly?",
+          "type": "MULTIPLE_CHOICE",
+          "value": [
+            "0138e344-468b-4460-955b-4e6908948ac4"
+          ],
+          "options": [
+            {
+              "id": "0138e344-468b-4460-955b-4e6908948ac4",
+              "text": "Less than $1000"
+            },
+            {
+              "id": "4ac319aa-19cc-4b37-ae22-64128abdf226",
+              "text": "$1000 - $2000"
+            },
+            {
+              "id": "b0748919-7eae-4c40-8411-369caf93d161",
+              "text": "$2000 - $3000"
+            },
+            {
+              "id": "9fd4b7f2-835f-464c-96ea-c01536f421a5",
+              "text": "$3000 - $4000"
+            },
+            {
+              "id": "d74ff2a5-dc28-413a-8c10-86979405ad53",
+              "text": "More than $4000"
+            }
+          ]
+        },
+        {
+          "key": "question_4aN8LX",
+          "label": "Which language(s) would you like to be surrounded by?",
+          "type": "MULTI_SELECT",
+          "value": [
+            "db47b43e-7078-48c8-800c-18aa9b8cee0b",
+            "0d510d33-5a60-40ed-a9be-76e0f45e0724"
+          ],
+          "options": [
+            {
+              "id": "0d510d33-5a60-40ed-a9be-76e0f45e0724",
+              "text": "English"
+            },
+            {
+              "id": "9bd52367-e8c9-4bc4-8517-c99090babe16",
+              "text": "Spanish"
+            },
+            {
+              "id": "db47b43e-7078-48c8-800c-18aa9b8cee0b",
+              "text": "French"
+            },
+            {
+              "id": "2f91aef8-84bd-4dd1-b1f6-3e983e58304a",
+              "text": "Portuguese"
+            },
+            {
+              "id": "217e38c5-8dbb-40eb-97cf-fa02f1c8ead7",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "key": "question_je9yLa",
+          "label": "What type of accommodation do you prefer?",
+          "type": "MULTIPLE_CHOICE",
+          "value": [
+            "b572f557-da4f-4849-8034-b037be18ef6c"
+          ],
+          "options": [
+            {
+              "id": "25335159-db6d-4e50-a6ed-46cc1e013882",
+              "text": "Apartment"
+            },
+            {
+              "id": "b572f557-da4f-4849-8034-b037be18ef6c",
+              "text": "House"
+            },
+            {
+              "id": "caede4df-ec16-4b78-8021-e7cf2baf2bf1",
+              "text": "Condo"
+            },
+            {
+              "id": "e808f527-ee4d-4584-b5d2-59e2675b98fb",
+              "text": "Villa"
+            },
+            {
+              "id": "1ab9148d-be16-4d63-9941-80026676b9cc",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "key": "question_2jxeLj",
+          "label": "What kind of activities would you like to do?",
+          "type": "MULTI_SELECT",
+          "value": [
+            "df879a8b-40ff-49ea-997d-34a8feac0f2f"
+          ],
+          "options": [
+            {
+              "id": "e3ea0a59-e9ec-4306-b79e-d516e83e29fd",
+              "text": "Beach"
+            },
+            {
+              "id": "df879a8b-40ff-49ea-997d-34a8feac0f2f",
+              "text": "Hiking"
+            },
+            {
+              "id": "8d43c8b0-5c31-4661-801f-df848296876b",
+              "text": "Golf"
+            },
+            {
+              "id": "33fdf620-7027-4625-b196-7f08b7c8e307",
+              "text": "Cultural Events"
+            },
+            {
+              "id": "aa798eb8-3bb3-418b-a6de-eb1a640faba4",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "key": "question_xVNp2r",
+          "label": "How important is access to healthcare facilities for you? ",
+          "type": "LINEAR_SCALE",
+          "value": 9
+        },
+        {
+          "key": "question_RWB0Rd",
+          "label": "Do you have any specific country in mind?",
+          "type": "DROPDOWN",
+          "value": [
+            "18fd2840-694c-48a1-893b-d60c70fe7a50"
+          ],
+          "options": [
+            {
+              "id": "3164e816-b223-4d32-aee4-083b627c0c88",
+              "text": "Italy"
+            },
+            {
+              "id": "32124bae-cdb0-4227-a57b-dacaecffbcea",
+              "text": "Peru"
+            },
+            {
+              "id": "2e4446df-4ee8-45c7-9147-000cf73015b6",
+              "text": "Brazil"
+            },
+            {
+              "id": "18fd2840-694c-48a1-893b-d60c70fe7a50",
+              "text": "India"
+            },
+            {
+              "id": "15eb8a4e-122b-40c4-a93b-c4bd3aeef028",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "key": "question_o9Vyoe",
+          "label": "When do you plan to move? ",
+          "type": "MULTIPLE_CHOICE",
+          "value": [
+            "42e4dc35-3d8e-4d19-a69e-c1b849df4987"
+          ],
+          "options": [
+            {
+              "id": "40466411-fc3b-4d87-b8e4-36e9fda78941",
+              "text": "Within 6 months"
+            },
+            {
+              "id": "d38d561b-f471-4e64-baa4-22d4aa7052c5",
+              "text": "Within 1 year"
+            },
+            {
+              "id": "b944daed-3b86-4b5a-9251-73fc20791cf6",
+              "text": "Within 2 years"
+            },
+            {
+              "id": "42e4dc35-3d8e-4d19-a69e-c1b849df4987",
+              "text": "More than 2 year"
+            },
+            {
+              "id": "3b7341be-2a10-471a-afc5-6c4c9672d43e",
+              "text": "I haven't decided yet"
+            }
+          ]
+        },
+        {
+          "key": "question_GeBzLp",
+          "label": "Have you visited the country/countries you are considering before?",
+          "type": "MULTIPLE_CHOICE",
+          "value": [
+            "0ad6c7bd-7b42-4ed3-a967-610e6ff2a03d"
+          ],
+          "options": [
+            {
+              "id": "0ad6c7bd-7b42-4ed3-a967-610e6ff2a03d",
+              "text": "Yes"
+            },
+            {
+              "id": "7546f066-1e16-4bcd-9248-6ed2d1966a9d",
+              "text": "No"
+            }
+          ]
+        }
+      ]
+    }
+  }
