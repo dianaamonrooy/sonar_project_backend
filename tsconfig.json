@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
-    "rootDir": "src",
     "outDir": "dist",
     "target": "es6" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */ /* Specify what JSX code is generated. */,
     "experimentalDecorators": true /* Enable experimental support for TC39 stage 2 draft decorators. */,
@@ -21,7 +19,7 @@
     "resolveJsonModule": true
   },
   "lib": ["es2015"],
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts","./api/*.ts"],
   "exclude": ["node_modules"]
 }
 

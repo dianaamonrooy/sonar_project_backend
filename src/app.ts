@@ -4,14 +4,20 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import formServicesController from "./controllers/formServices.controller";
 import helmet from "helmet";
-import app from "./app";
 
 //For env File 
+dotenv.config();
 
+const app = express();
 const PORT = process.env.PORT || 3000;
+app.use(helmet());
+app.use(cors());
+app.use(bodyParser.json());
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.post('/webhook', (req: Request, res: Response) => {
+    // It sends the status early just to answer the server (this is what a webhook does)
+    res.sendStatus(200);
+    formServicesController.createNewFormEntry(req)
 });
 
 export default app
