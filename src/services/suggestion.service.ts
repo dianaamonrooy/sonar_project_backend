@@ -55,7 +55,8 @@ class SuggestionService {
         // Filter 1: minIncomePerMonth
         const range = this.convertToRange(formData.monthlyCost)
         selectedCountries = allCountries.filter(country => country.minIncomeInDollarsPerMonth <= parseInt(range[1]))
-        // console.log(selectedCountries)
+        // If no matches, returns all of the countries
+        if (selectedCountries.length === 0) selectedCountries = allCountries
 
         // Filter 2: climate
         let apiUrl = process.env.SUPABASE_ENDPOINT + '/rest/v1/country-climate?select=country(name),climate(typeOfClimate)'
@@ -75,7 +76,8 @@ class SuggestionService {
                 }
             })
             selectedCountries = newSelectedCountries
-            // console.log(selectedCountries)
+            // If no matches, returns all of the countries
+            if (selectedCountries.length === 0) selectedCountries = allCountries
         } catch (error) {
             console.error('Error getting country info:', error);
             throw error; 
@@ -92,7 +94,8 @@ class SuggestionService {
             })
         });
         selectedCountries = newSelectedCountries
-        // console.log(selectedCountries)
+        // If no matches, returns all of the countries
+        if (selectedCountries.length === 0) selectedCountries = allCountries
 
 
         // Filter 4: Activity
@@ -116,7 +119,8 @@ class SuggestionService {
                 
             })
             selectedCountries = newSelectedCountries
-            // console.log(selectedCountries)
+            // If no matches, returns all of the countries
+            if (selectedCountries.length === 0) selectedCountries = allCountries
         } catch (error) {
             console.error('Error getting country info:', error);
             throw error; 
