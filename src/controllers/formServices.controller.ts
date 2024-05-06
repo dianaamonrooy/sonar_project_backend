@@ -39,7 +39,7 @@ class FormResponsesController{
             console.log(suggestions)
             // // Store suggestions in database
             // // I will always update it (never add a new one) 
-            // await suggestionService.storeSuggestion(email.value, suggestions)
+            await suggestionService.storeSuggestion(email.value, suggestions)
         }
     }
 }
