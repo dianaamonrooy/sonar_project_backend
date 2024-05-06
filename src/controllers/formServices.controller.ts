@@ -6,6 +6,7 @@ import suggestionService from "../services/suggestion.service"
 class FormResponsesController{
     async createNewFormEntry(req: Request){
         const body: TallyDTO = req.body
+        console.log(body.data.fields)
         const fieldAnswers = body.data.fields
 
         // Gets each field according to it's labels
