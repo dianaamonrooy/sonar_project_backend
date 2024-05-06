@@ -33,9 +33,10 @@ class FormResponsesController{
                 formData = await formResponsesService.updateFormEntry(email,climate, monthlyCost, language, accomodation, activity, healthcare, country, movePlanned)
 
             }
-            // const allCountries = await suggestionService.getAllCountries()
-            // const suggestions = await suggestionService.createSuggestion(allCountries,formData)
-            // console.log(suggestions)
+            console.log(formData)
+            const allCountries = await suggestionService.getAllCountries()
+            const suggestions = await suggestionService.createSuggestion(allCountries,formData)
+            console.log(suggestions)
             // // Store suggestions in database
             // // I will always update it (never add a new one) 
             // await suggestionService.storeSuggestion(email.value, suggestions)
