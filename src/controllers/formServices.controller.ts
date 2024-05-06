@@ -1,6 +1,7 @@
 import { LabelFieldTally, TallyDTO } from "../dto/input/tally.dto"
 import formResponsesService from "../services/formResponses.service"
 import { Request } from "express"
+import suggestionService from "../services/suggestion.service"
 
 class FormResponsesController{
     async createNewFormEntry(req: Request){
@@ -19,18 +20,25 @@ class FormResponsesController{
         const movePlanned = fieldAnswers.filter(field => field.label === LabelFieldTally.MOVEPLANNED)[0]
         if (typeof email.value === 'string') {
             const hasUserDoneTheSurvey = await formResponsesService.isEmailInSurveys(email.value)
+            let formData
             if (!hasUserDoneTheSurvey){
                 // Create
                 console.log("IN CREATE")
-                await formResponsesService.createNewFormEntry(email,climate, monthlyCost, language, accomodation, activity, healthcare, country, movePlanned)
+                formData = await formResponsesService.createNewFormEntry(email,climate, monthlyCost, language, accomodation, activity, healthcare, country, movePlanned)
+                
             }else {
                 // Update
                 console.log("IN UPDATE")
-                await formResponsesService.updateFormEntry(email,climate, monthlyCost, language, accomodation, activity, healthcare, country, movePlanned)
+                formData = await formResponsesService.updateFormEntry(email,climate, monthlyCost, language, accomodation, activity, healthcare, country, movePlanned)
 
             }
+            const allCountries = await suggestionService.getAllCountries()
+            const suggestions = await suggestionService.createSuggestion(allCountries,formData)
+            console.log(suggestions)
+            // Store suggestions in database
+            // I will always update it (never add a new one) 
+            await suggestionService.storeSuggestion(email.value, suggestions)
         }
-        
     }
 }
 

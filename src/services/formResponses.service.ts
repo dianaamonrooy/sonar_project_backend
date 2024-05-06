@@ -63,7 +63,7 @@ class FormResponsesService {
 
         // Uses the SUPABASE endpoint to add the row
         try {
-            const response = await axios.post(apiUrl, {
+            const formData = {
                 email: this.processResponses(email),
                 climate: this.processResponses(climate),
                 monthlyCost: this.processResponses(monthlyCost),
@@ -72,8 +72,9 @@ class FormResponsesService {
                 activity: this.processResponses(activity),
                 healthcare: this.processResponses(healthcare),
                 country: this.processResponses(country),
-                movePlanned: this.processResponses(movePlanned) 
-            }, {
+                movePlanned: this.processResponses(movePlanned)
+            }
+            const response = await axios.post(apiUrl, formData, {
                 headers: {
                     'apikey': supabaseKey,
                     'Authorization': `Bearer ${supabaseKey}`,
@@ -81,7 +82,7 @@ class FormResponsesService {
                     'Prefer': 'return=minimal'
                 }
             });
-            return response.data;
+            return formData;
         } catch (error) {
             console.error('Error creating form entry:', error);
             throw error; 
@@ -107,7 +108,7 @@ class FormResponsesService {
         const supabaseKey = process.env.API_KEY
 
         try {
-            const response = await axios.patch(apiUrl, {
+            const formData = {
                 climate: this.processResponses(climate),
                 monthlyCost: this.processResponses(monthlyCost),
                 language: this.processResponses(language),
@@ -116,7 +117,8 @@ class FormResponsesService {
                 healthcare: this.processResponses(healthcare),
                 country: this.processResponses(country),
                 movePlanned: this.processResponses(movePlanned) 
-            }, {
+            }
+            const response = await axios.patch(apiUrl, formData, {
                 headers: {
                     'apikey': supabaseKey,
                     'Authorization': `Bearer ${supabaseKey}`,
@@ -124,6 +126,8 @@ class FormResponsesService {
                     'Prefer': 'return=minimal'
                 }
             });
+
+            return formData
             
         } catch (error) {
             console.error('Error creating form entry:', error);
