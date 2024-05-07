@@ -176,7 +176,7 @@ class SuggestionService {
     async storeSuggestion(email, suggestions){
 
         // Configures the API 
-        const apiUrl = process.env.SUPABASE_ENDPOINT+`/rest/v1/user?email=eq.${email}`;
+        const apiUrl = process.env.SUPABASE_ENDPOINT+`/rest/v1/userWebhook?email=eq.${email}`;
         const supabaseKey = process.env.API_KEY
 
         try {
