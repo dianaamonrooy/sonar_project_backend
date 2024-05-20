@@ -80,20 +80,27 @@ class SuggestionService {
             if (selectedCountries.length === 0) selectedCountries = allCountries
         } catch (error) {
             console.error('Error getting country info:', error);
-            throw error; 
+            
         }
 
         //Filter 3: Language
         let newSelectedCountries = []
-        formData.language.forEach(languageFormData => {
-            selectedCountries.forEach(elem => {
-                // If the language of the form is in the elem.languages and if the elem hasn't been pushed into the newSelectedCountries
-                if (elem.languages.indexOf(languageFormData) != -1 && newSelectedCountries.indexOf(elem) === -1){
-                    newSelectedCountries.push(elem)
-                }
-            })
-        });
-        selectedCountries = newSelectedCountries
+        try {
+            formData.language.forEach(languageFormData => {
+                selectedCountries.forEach(elem => {
+                    // If the language of the form is in the elem.languages and if the elem hasn't been pushed into the newSelectedCountries
+                    if (elem.languages.indexOf(languageFormData) != -1 && newSelectedCountries.indexOf(elem) === -1){
+                        newSelectedCountries.push(elem)
+                    }
+                })
+            });
+            selectedCountries = newSelectedCountries
+            if (selectedCountries.length === 0) selectedCountries = allCountries
+        } catch (error) {
+            console.log(error)
+            selectedCountries = allCountries
+        }
+        
         // If no matches, returns all of the countries
         if (selectedCountries.length === 0) selectedCountries = allCountries
 
@@ -123,7 +130,7 @@ class SuggestionService {
             if (selectedCountries.length === 0) selectedCountries = allCountries
         } catch (error) {
             console.error('Error getting country info:', error);
-            throw error; 
+            
         }
 
         // Filter 5: country chosen
